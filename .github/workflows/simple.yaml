@@ -23,6 +23,6 @@ jobs:
     steps:
       - name: directory powershell
         run: Get-Location
-      - name: directory basher
+      - name: directory basher basher
         run: pwd
         shell: bash
