@@ -18,7 +18,9 @@ jobs:
           - os: macos-latest
             node_version: 10
           - os: windows-latest
-            node_version: [8,10]
+            node_version: 8
+          - os: windows-latest
+            node_version: 10
     runs-on: ${{ matrix.os }}
     env:
       IS_UBUNTU_12: ${{ matrix.is_ubuntu_12 }}
