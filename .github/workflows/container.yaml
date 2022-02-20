@@ -22,7 +22,7 @@ jobs:
         with:
           args: "-X POST http://localhost:3001/api/user -H 'Content-Type: application/json' -d '{\"username\": \"lord\", \"address\": \"hell\"}'"
     steps:
-      - name: Add new user
+      - name: Get users
         uses: wei/curl@v1
         with:
           args: "curl http://localhost:3001/api/users"
