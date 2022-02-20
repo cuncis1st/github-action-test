@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       app:
-        image: cuncis1st/node-api
+        image: cuncis1st/simple-docker-nodejs-api_app
         ports: 
           - 3001:3000
       mongo:
@@ -18,6 +18,6 @@ jobs:
       image:  node:lts-alpine3.14
     steps:
       - name:  Log node version
-        run: "curl -X POST http://localhost:3001/api/user -H 'Content-Type: application/json' -d '{\"username\": \"hello\", \"address\": \"mamapang\"}'"
+        run: "curl -X POST http://localhost:3001/api/user -H 'Content-Type: application/json' -d '{\"username\": \"lord\", \"address\": \"hell\"}'"
       - name: Get Users
-        run: curl http://localhost:3001/api/user
+        run: curl http://localhost:3001/api/users
