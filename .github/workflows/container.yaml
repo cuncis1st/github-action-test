@@ -18,6 +18,6 @@ jobs:
       image:  node:lts-alpine3.14
     steps:
       - name: Log node version
-        run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{\"username\": \"lord\", \"address\": \"hell\"}'''
+        run: '/usr/bin/curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{\"username\": \"lord\", \"address\": \"hell\"}'''
       - name: Get Users
-        run: curl http://localhost:3001/api/users
+        run: /usr/bin/curl http://localhost:3001/api/users
