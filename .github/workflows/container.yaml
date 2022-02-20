@@ -17,16 +17,7 @@ jobs:
     container:
       image:  node:lts-alpine3.14
     steps:
-      - name: Add new user
-        uses: wei/curl@v1
-        with:
-          args: "-X POST http://localhost:3001/api/user -H 'Content-Type: application/json' -d '{\"username\": \"lord\", \"address\": \"hell\"}'"
-    steps:
-      - name: Get users
-        uses: wei/curl@v1
-        with:
-          args: "curl http://localhost:3001/api/users"
-      # - name:  Log node version
-      #   run: "curl -X POST http://localhost:3001/api/user -H 'Content-Type: application/json' -d '{\"username\": \"lord\", \"address\": \"hell\"}'"
-      # - name: Get Users
-      #   run: curl http://localhost:3001/api/users
+      - name: Log node version
+        run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{\"username\": \"lord\", \"address\": \"hell\"}''"'
+      - name: Get Users
+        run: curl http://localhost:3001/api/users
