@@ -14,8 +14,6 @@ jobs:
         image: mongo
         ports: 
           - 27017:27017
-    container:
-      image:  node:lts-alpine3.14
     steps:
       - name: check location curl
         run: which curl
@@ -23,3 +21,5 @@ jobs:
         run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{\"username\": \"lord\", \"address\": \"hell\"}'''
       - name: Get Users
         run: curl http://localhost:3001/api/users
+    container:
+      image:  node:lts-alpine3.14
