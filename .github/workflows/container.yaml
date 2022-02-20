@@ -5,19 +5,22 @@ on: push
 jobs:
   node-docker:
     runs-on: ubuntu-latest
-    services:
-      app:
-        image: cuncis1st/simple-docker-nodejs-api_app
-        ports: 
-          - 3001:3000
-      mongo:
-        image: mongo
-        ports: 
-          - 27017:27017
-    container:
-      image:  node:lts-alpine3.14
     steps:
-      - name: Log node version
-        run: '/usr/bin/curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{\"username\": \"lord\", \"address\": \"hell\"}'''
-      - name: Get Users
-        run: /usr/bin/curl http://localhost:3001/api/users
+      - name: check location curl
+        run: which curl
+    # services:
+    #   app:
+    #     image: cuncis1st/simple-docker-nodejs-api_app
+    #     ports: 
+    #       - 3001:3000
+    #   mongo:
+    #     image: mongo
+    #     ports: 
+    #       - 27017:27017
+    # container:
+    #   image:  node:lts-alpine3.14
+    # steps:
+    #   - name: Log node version
+    #     run: '/usr/bin/curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{\"username\": \"lord\", \"address\": \"hell\"}'''
+    #   - name: Get Users
+    #     run: /usr/bin/curl http://localhost:3001/api/users
