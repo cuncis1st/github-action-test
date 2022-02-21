@@ -23,8 +23,8 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run a script
         run: |
-          locate bash
-          cat scripts.sh
+          ./myscripts.sh
+          cat myscripts.sh
         # uses: docker://node:17-alpine3.14
         # with:
         #   entrypoint: ./scripts.sh
