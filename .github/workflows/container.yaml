@@ -22,9 +22,8 @@ jobs:
           args: -v
       - uses: actions/checkout@v2
       - name: Run a script
-        run: |
-          ./scripts.sh
-        shell: /usr/bin/bash
+        working-directory: scripts
+        run: ./scripts.sh
         # with:
         #   entrypoint: ./scripts.sh
         #   args: "stringboy"
