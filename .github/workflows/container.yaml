@@ -24,7 +24,7 @@ jobs:
       - name: Run a script
         uses: docker://node:17-alpine3.14
         with:
-          entrypoint: './scripts.sh'
+          entrypoint: ./scripts.sh
           args: "stringboy"
   # node-docker:
   #   runs-on: ubuntu-latest
