@@ -22,7 +22,7 @@ jobs:
           args: -v
       - uses: actions/checkout@v1
       - name: Run a script
-        run: ./scripts.sh strhoho
+        run: sudo ./scripts.sh strhoho
   # node-docker:
   #   runs-on: ubuntu-latest
   #   services:
