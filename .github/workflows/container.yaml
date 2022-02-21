@@ -21,8 +21,10 @@ jobs:
           entrypoint: '/usr/local/bin/node'
           args: -v
       - uses: actions/checkout@v1
+      - name: give a permission
+        run: chmod +x ./scripts.sh
       - name: Run a script
-        run: sudo ./scripts.sh strhoho
+        run: ./scripts.sh strhoho
   # node-docker:
   #   runs-on: ubuntu-latest
   #   services:
