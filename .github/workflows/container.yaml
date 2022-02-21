@@ -22,9 +22,9 @@ jobs:
           args: -v
       - uses: actions/checkout@v1
       - name: Run a script
-        run: |
-          chmod +x scripts.sh
-          ./scripts.sh strhoho
+        with:
+          entrypoint: './scripts.sh'
+          args: "stringboy"
   # node-docker:
   #   runs-on: ubuntu-latest
   #   services:
