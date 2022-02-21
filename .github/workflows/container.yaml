@@ -20,12 +20,11 @@ jobs:
         with:
           entrypoint: '/usr/local/bin/node'
           args: -v
+      - uses: actions/checkout@v2
       - name: Run a script
-        working-directory: scripts
-        run: ./scripts.sh
-        # with:
-        #   entrypoint: ./scripts.sh
-        #   args: "stringboy"
+        with:
+          entrypoint: ./scripts.sh
+          args: "stringboy"
   # node-docker:
   #   runs-on: ubuntu-latest
   #   services:
