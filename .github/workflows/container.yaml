@@ -8,9 +8,6 @@ jobs:
     container:
       image: node:17-alpine3.14
     steps:
-      - uses: actions/checkout@v2
-      - name: Run a script
-        run: ./scripts.sh
       - name: log node version
         run: node -v
       - name: Step with docker
@@ -23,6 +20,9 @@ jobs:
         with:
           entrypoint: '/usr/local/bin/node'
           args: -v
+      - uses: actions/checkout@v1
+      - name: Run a script
+        run: echo "Hello"
         # uses: docker://node:17-alpine3.14
         # with:
         #   entrypoint: ./scripts.sh
