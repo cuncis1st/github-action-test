@@ -24,7 +24,7 @@ jobs:
       - name: Run a script
         run: |
           ./scripts.sh theresone
-        shell: bash
+        shell: /usr/bin/bash
         # with:
         #   entrypoint: ./scripts.sh
         #   args: "stringboy"
