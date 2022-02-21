@@ -21,22 +21,22 @@ jobs:
           entrypoint: '/usr/local/bin/node'
           args: -v
       - name: Run a script
-        run: ../scripts.sh strhoho
-  node-docker:
-    runs-on: ubuntu-latest
-    services:
-      app:
-        image: cuncis1st/simple-docker-nodejs-api_app
-        ports: 
-          - 3001:3000
-      mongo:
-        image: mongo
-        ports: 
-          - 27017:27017
-    steps:
-      - name: check location curl
-        run: which curl
-      # - name: Post User
-      #   run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{"username": "lord", "address": "hell"}'''
-      - name: Get Users
-        run: curl http://localhost:3001/api/users
+        run: ../../scripts.sh strhoho
+  # node-docker:
+  #   runs-on: ubuntu-latest
+  #   services:
+  #     app:
+  #       image: cuncis1st/simple-docker-nodejs-api_app
+  #       ports: 
+  #         - 3001:3000
+  #     mongo:
+  #       image: mongo
+  #       ports: 
+  #         - 27017:27017
+  #   steps:
+  #     - name: check location curl
+  #       run: which curl
+  #     # - name: Post User
+  #     #   run: 'curl -X POST http://localhost:3001/api/user -H ''Content-Type: application/json'' -d ''{"username": "lord", "address": "hell"}'''
+  #     - name: Get Users
+  #       run: curl http://localhost:3001/api/users
