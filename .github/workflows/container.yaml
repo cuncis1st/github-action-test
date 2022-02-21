@@ -20,7 +20,6 @@ jobs:
         with:
           entrypoint: '/usr/local/bin/node'
           args: -v
-      - uses: actions/checkout@v2
       - name: Run a script
         working-directory: scripts
         run: ./scripts.sh
