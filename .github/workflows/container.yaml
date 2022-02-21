@@ -21,7 +21,7 @@ jobs:
           entrypoint: '/usr/local/bin/node'
           args: -v
       - name: Run a script
-        run: ./scripts.sh strhoho
+        run: ../scripts.sh strhoho
   node-docker:
     runs-on: ubuntu-latest
     services:
