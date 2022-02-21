@@ -20,8 +20,8 @@ jobs:
         with:
           entrypoint: '/usr/local/bin/node'
           args: -v
+      - uses: actions/checkout@v1
       - name: Run a script
-        uses: actions/checkout@v1
         with:
           entrypoint: ./scripts.sh
           args: "stringboy"
