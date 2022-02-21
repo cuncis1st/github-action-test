@@ -31,8 +31,6 @@ jobs:
         image: mongo
         ports: 
           - 27017:27017
-    # container:
-    #   image: node:lts-alpine3.14
     steps:
       - name: check location curl
         run: which curl
