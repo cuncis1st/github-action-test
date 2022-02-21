@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a script
         run: |
-          ./scripts.sh
+          ./scripts.sh theresone
         shell: bash
         # with:
         #   entrypoint: ./scripts.sh
