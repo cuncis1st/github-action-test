@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Run a script
         run: |
-          chmod +x ./scripts.sh
+          chmod +x scripts.sh
           ./scripts.sh strhoho
   # node-docker:
   #   runs-on: ubuntu-latest
