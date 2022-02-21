@@ -20,8 +20,9 @@ jobs:
         with:
           entrypoint: '/usr/local/bin/node'
           args: -v
+      - uses: actions/checkout@v1
       - name: Run a script
-        run: ../../scripts.sh strhoho
+        run: ./scripts.sh strhoho
   # node-docker:
   #   runs-on: ubuntu-latest
   #   services:
