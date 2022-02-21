@@ -20,6 +20,10 @@ jobs:
         with:
           entrypoint: '/usr/local/bin/node'
           args: -v
+      - name: Run a script
+        with:
+          entrypoint: './scripts.sh'
+          args: "some string"
   node-docker:
     runs-on: ubuntu-latest
     services:
