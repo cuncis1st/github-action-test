@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./.github/actions
+      - uses: .github/actions
         id: hello
         with:
           who-to-greet: "World"
